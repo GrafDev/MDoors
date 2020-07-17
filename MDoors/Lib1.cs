@@ -26,8 +26,8 @@ namespace MDoors
         {
             this.xyz = (familyInstance.Location as LocationPoint).Point;
             this.Mirrored = familyInstance.Mirrored;
-            this.Width = familyInstance.Symbol.LookupParameter(BuiltInParameter.DOOR_WIDTH.ToString());
-            this.Height = familyInstance.Symbol.LookupParameter(BuiltInParameter.DOOR_HEIGHT.ToString());
+            this.Width = familyInstance.get_Parameter(BuiltInParameter.DOOR_WIDTH);
+            this.Height = familyInstance.get_Parameter(BuiltInParameter.DOOR_HEIGHT); 
 
         }
 
@@ -81,8 +81,8 @@ namespace MDoors
     {
         internal Family family;
 
-        //string fullPath = @"C:\Users\gregy\source\repos\DoorsMirrored\Properties\";
-        string fullPath = @"C:\Users\jakovlevgm\source\repos\MDoors\";
+        string fullPath = @"C:\Users\gregy\source\repos\MDoors\";
+        //string fullPath = @"C:\Users\jakovlevgm\source\repos\MDoors\";
         string familyName = "ADSK_Error_Place";
 
 
@@ -119,8 +119,11 @@ namespace MDoors
                 familyType.Activate();
                 foreach (Door elem in doors)
                 {
-                    XYZ point = elem.xyz;
-                    FamilyInstance fam = doc.Create.NewFamilyInstance(point, familyType, StructuralType.NonStructural);
+                    FamilyInstance fam = doc.Create.NewFamilyInstance(elem.xyz, familyType, StructuralType.NonStructural);
+                    fam.get_Parameter(BuiltInParameter.DOOR_WIDTH).Set(Convert.ToDouble(elem.Width));
+                    fam.get_Parameter(BuiltInParameter.DOOR_HEIGHT).Set(Convert.ToDouble(elem.Height));
+
+
                 }
                 tx.Commit();
             }

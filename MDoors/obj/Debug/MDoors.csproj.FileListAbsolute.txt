@@ -77,3 +77,10 @@ C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.pdb
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.Properties.Resources.resources
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.GenerateResource.cache
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\bin\Debug\VCRevitRibbonUtil.dll
+C:\Users\gregy\source\repos\MDoors\MDoors\bin\Debug\MDoors.dll
+C:\Users\gregy\source\repos\MDoors\MDoors\bin\Debug\MDoors.pdb
+C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.Properties.Resources.resources
+C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.GenerateResource.cache
+C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.CoreCompileInputs.cache
+C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.dll
+C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.pdb
