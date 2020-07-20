@@ -3,9 +3,9 @@
   <AddIn Type="Application">
     <Name>Mirrored doors</Name>
     <Assembly>C:\Users\jakovlevgm\source\repos\MDoors\MDoors\bin\Debug\MDoors.dll</Assembly>
-    <AddInId>b02c39f2-5108-4e0b-ac4d-e9380fec7893</AddInId>
-    <FullClassName>BIMpel.MdoorsAddPanel</FullClassName>
-    <VendorId>NAME</VendorId>
-    <VendorDescription>Your Company Information</VendorDescription>
+    <AddInId>5eae51c4-5c8c-4b78-8f62-b982adbedfc1</AddInId>
+    <FullClassName>MDoors.AddPanel</FullClassName>
+    <VendorId>BIMpel</VendorId>
+    <VendorDescription>gregory.yakovlev@gmail.com</VendorDescription>
   </AddIn>
 </RevitAddIns>

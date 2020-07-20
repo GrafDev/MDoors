@@ -10,27 +10,23 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using System.IO;
 using System.Runtime.CompilerServices;
-using VCRevitRibbonUtil;
 
 namespace MDoors
 {
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
-    public class MarkDoors : IExternalCommand
+    public class MarkDoors: IExternalCommand
     {
+        internal static Document doc;
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             UIApplication uiApp = commandData.Application;
-            Document doc = uiApp.ActiveUIDocument.Document;
-            Doors doors;
-            FlagOfError flag;
+            doc = uiApp.ActiveUIDocument.Document;
+            
             try
             {
-                doors = new Doors(doc);
-                flag = new FlagOfError(doc);
-                flag.PlaceErrorFamily(doc,doors.mirrored);
-                //error = new FlagOfError(doc);
-                //error.PlaceErrorFamily(doc, doors.mirrored);
-                doors.ShowCount();
+                Doors.FindMirrored();
+                int count=Flags.Place(doc);
+                TaskDialog.Show("Mirrored doors", "Found " + count + " mirrored doors");
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)
             {

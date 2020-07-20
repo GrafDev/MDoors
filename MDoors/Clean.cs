@@ -10,16 +10,32 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using System.IO;
 using System.Runtime.CompilerServices;
-using VCRevitRibbonUtil;
 
 namespace MDoors
 {
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
     public class CleanDoors : IExternalCommand
     {
+        internal static Document doc;
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            TaskDialog.Show("Revit", "Clean");
+            
+            UIApplication uiApp = commandData.Application;
+            doc = uiApp.ActiveUIDocument.Document;
+
+            try
+            {
+                TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc)+ " mirrored door markers");
+            }
+            catch (Autodesk.Revit.Exceptions.OperationCanceledException)
+            {
+                return Result.Cancelled;
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return Result.Cancelled;
+            }
             return Result.Succeeded;
         }
 

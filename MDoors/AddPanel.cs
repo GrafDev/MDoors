@@ -10,16 +10,15 @@ using Autodesk.Revit.UI;
 using Autodesk.Revit.ApplicationServices;
 using System.IO;
 using System.Runtime.CompilerServices;
-using VCRevitRibbonUtil;
 using MDoors.Properties;
 using Autodesk.Revit.Creation;
 using System.Windows.Media;
 
 namespace MDoors
 {
+
     public class AddPanel : IExternalApplication
     {
-
         public Result OnStartup(UIControlledApplication application)
         {            
             string panelName = "Mirrored Doors";
@@ -81,6 +80,4 @@ namespace MDoors
         }
         // Чтение иконки из сборки
     }
-
-
 }
