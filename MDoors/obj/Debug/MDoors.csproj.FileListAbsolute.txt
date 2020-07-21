@@ -12,4 +12,4 @@ C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.GenerateResour
 C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.CoreCompileInputs.cache
 C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.dll
 C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.pdb
-C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.csprojAssemblyReference.cache
+C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.FormParameters.resources

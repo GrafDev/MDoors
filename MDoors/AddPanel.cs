@@ -22,6 +22,8 @@ namespace MDoors
         internal string verRevit;
         internal static string fullPath;
         internal static string familyName = "ADSK_Error_Place";
+        internal static bool dialogBoxShow = true;
+        internal static bool flagsPlace = true;
 
         public Result OnStartup(UIControlledApplication application)
         {
@@ -35,8 +37,12 @@ namespace MDoors
             string imageCleanLarge = "MDoors.icon_CleanError32.png";
             string imageRibbonSmall = "MDoors.iconMain_Door16.png";
             string imageRibbonLarge =  "MDoors.iconMain_Door32.png";
+            string imageParametersSmall = "MDoors.iconParameters16.png";
+            string imageParametersLarge = "MDoors.iconParameters32.png";
+
             string classMarkName = "MDoors.MarkDoors";
             string classCleanName = "MDoors.CleanDoors";
+            string classParametersName = "MDoors.ParametersDoors";
 
 
             string thisAssembyPath = Assembly.GetExecutingAssembly().Location;
@@ -61,6 +67,12 @@ namespace MDoors
             pushCleanButton.Image = GetEmbeddedImage(imageCleantSmall);
             pushCleanButton.LargeImage = GetEmbeddedImage(imageCleanLarge);
             pushCleanButton.ClassName = classCleanName;
+
+            PushButtonData buttonParametersData = new PushButtonData("Name3", "Parameters", thisAssembyPath, classParametersName);
+            PushButton pushParametersButton = group1.AddPushButton(buttonParametersData) as PushButton;
+            pushParametersButton.Image = GetEmbeddedImage(imageParametersSmall);
+            pushParametersButton.LargeImage = GetEmbeddedImage(imageParametersLarge);
+            pushParametersButton.ClassName = classParametersName;
 
             return Result.Succeeded;
 
