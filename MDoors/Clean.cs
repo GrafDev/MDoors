@@ -17,12 +17,11 @@ namespace MDoors
     public class CleanDoors : IExternalCommand
     {
         internal static Document doc;
+
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            
             UIApplication uiApp = commandData.Application;
             doc = uiApp.ActiveUIDocument.Document;
-
             try
             {
                 TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc)+ " mirrored door markers");
@@ -41,5 +40,5 @@ namespace MDoors
 
     }
 
-
+    
 }

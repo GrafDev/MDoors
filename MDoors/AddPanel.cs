@@ -17,10 +17,17 @@ using System.Windows.Media;
 namespace MDoors
 {
 
-    public class AddPanel : IExternalApplication
+    public class Start : IExternalApplication
     {
+        internal string verRevit;
+        internal static string fullPath;
+        internal static string familyName = "ADSK_Error_Place";
+
         public Result OnStartup(UIControlledApplication application)
-        {            
+        {
+            UIControlledApplication app = application;
+            verRevit = app.ControlledApplication.VersionNumber;
+            fullPath = $@"C:\ProgramData\Autodesk\Revit\Addins\{verRevit}\MDoors\";
             string panelName = "Mirrored Doors";
             string imagePaintSmall = "MDoors.icon_PaintError16.png";
             string imagePaintLarge = "MDoors.icon_PaintError32.png";
@@ -71,7 +78,7 @@ namespace MDoors
             {
                 return null;
             }
-        }
+        }       
 
         public Result OnShutdown(UIControlledApplication application)
         {

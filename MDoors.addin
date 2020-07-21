@@ -2,9 +2,9 @@
 <RevitAddIns>
   <AddIn Type="Application">
     <Name>Mirrored doors</Name>
-    <Assembly>C:\Users\jakovlevgm\source\repos\MDoors\MDoors\bin\Debug\MDoors.dll</Assembly>
+    <Assembly>.\MDoors\bin\Debug\MDoors.dll</Assembly>
     <AddInId>5eae51c4-5c8c-4b78-8f62-b982adbedfc1</AddInId>
-    <FullClassName>MDoors.AddPanel</FullClassName>
+    <FullClassName>MDoors.Strat</FullClassName>
     <VendorId>BIMpel</VendorId>
     <VendorDescription>gregory.yakovlev@gmail.com</VendorDescription>
   </AddIn>

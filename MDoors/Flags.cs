@@ -17,28 +17,9 @@ namespace MDoors
     {
         private static Family family;
         //private static Type familyType;
-        private static string fullPath = @"C:\Users\jakovlevgm\source\repos\MDoors\";
-        private static string familyName = "ADSK_Error_Place";
-       // private static Document doc = MarkDoors.doc;
-
-        private static void LoadFamily(Document doc)// Загрузка семейства из файла.
-        {
-            FilteredElementCollector a = new FilteredElementCollector(doc).OfClass(typeof(Family));
-            family = a.FirstOrDefault<Element>(e => e.Name.Equals(familyName)) as Family;
-            if (null == family)
-            {
-                string FamilyPath = fullPath + familyName + ".rfa";                
-                using (Transaction tx = new Transaction(doc))
-                {
-                    tx.Start("Загрузка семейства");                    
-                    doc.LoadFamily(FamilyPath, out family);
-                   // familyType = family.GetType();
-                    tx.Commit();
-                }
-            }
-
-        }
-
+        internal static string fullPath = Start.fullPath;
+        internal static string familyName = Start.familyName;
+        //private static Type familyType
         static internal int Clean(Document doc)
         {
             List<FamilyInstance> doors = new List<FamilyInstance>();
@@ -89,7 +70,24 @@ namespace MDoors
             }
             return count;
         }//Устанавливает семейтсво в точки отзеркаленых дверей
-        
+        private static void LoadFamily(Document doc)// Загрузка семейства из файла.
+        {
+            FilteredElementCollector a = new FilteredElementCollector(doc).OfClass(typeof(Family));
+            family = a.FirstOrDefault<Element>(e => e.Name.Equals(familyName)) as Family;
+
+            if (null == family)
+            {
+                string FamilyPath = fullPath + familyName + ".rfa";
+                using (Transaction tx = new Transaction(doc))
+                {
+                    tx.Start("Загрузка семейства");
+                    doc.LoadFamily(FamilyPath, out family);
+                    // familyType = family.GetType();
+                    tx.Commit();
+                }
+            }
+
+        }
 
 
 

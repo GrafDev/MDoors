@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Mirrored doors</Name>
+    <Assembly>.\MDoors\MDoors.dll</Assembly>
+    <AddInId>DF42C0FA-C980-4142-B460-52384A1324ED</AddInId>
+    <FullClassName>MDoors.Start</FullClassName>
+    <VendorId>BIMpel</VendorId>
+    <VendorDescription>gregory.yakovlev@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
