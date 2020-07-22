@@ -21,12 +21,22 @@ namespace MDoors
         {
             UIApplication uiApp = commandData.Application;
             doc = uiApp.ActiveUIDocument.Document;
-            
+
             try
             {
-                Doors.FindMirrored();
-                int count=Flags.Place(doc);
-                TaskDialog.Show("Mirrored doors", "Found " + count + " mirrored doors");
+                Doors.FindMirrored(doc);
+                Flags.LoadFamily(doc);
+                Flags.Place(doc);
+                if (Start.flagsPlace)
+                {
+                    if (Start.dialogBoxShow)
+                        TaskDialog.Show("Mirrored doors", "Found and mark " + Flags.counFlags + " mirrored doors");
+                }
+                else
+                {
+                    TaskDialog.Show("Mirrored doors", "Found  " + Doors.mirrored.Count + " mirrored doors");
+                }
+
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)
             {

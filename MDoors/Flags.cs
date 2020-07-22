@@ -19,6 +19,7 @@ namespace MDoors
         //private static Type familyType;
         internal static string fullPath = Start.fullPath;
         internal static string familyName = Start.familyName;
+        internal static int counFlags = 0;
         //private static Type familyType
         static internal int Clean(Document doc)
         {
@@ -32,7 +33,7 @@ namespace MDoors
             }
             using (Transaction tx = new Transaction(doc))
             {
-                tx.Start("Delete Errors");
+                tx.Start("Clean");
                 foreach (FamilyInstance elem in doors)
                 {
                     if (elem.Symbol.FamilyName == familyName)
@@ -48,29 +49,29 @@ namespace MDoors
         }
 
 
-        internal static int Place(Document doc)
+        internal static void Place(Document doc)
         {
-            LoadFamily(doc);
             Clean(doc);
-            int count = 0;
             ISet<ElementId> elementSet = family.GetFamilySymbolIds();
             FamilySymbol familyType = doc.GetElement(elementSet.First()) as FamilySymbol;
             using (Transaction tx = new Transaction(doc))
             {
-                tx.Start("вставка семейства");
+                tx.Start("insert famaly");
                 familyType.Activate();
                 foreach (Door door in Doors.mirrored)
                 {
-                    FamilyInstance fam = doc.Create.NewFamilyInstance(door.xyz, familyType, StructuralType.NonStructural);
-                    fam.get_Parameter(BuiltInParameter.DOOR_WIDTH).Set(Convert.ToDouble(door.Width));
-                    fam.get_Parameter(BuiltInParameter.DOOR_HEIGHT).Set(Convert.ToDouble(door.Height));
-                    count++;
+                    if (Start.flagsPlace)
+                    {
+                        FamilyInstance fam = doc.Create.NewFamilyInstance(door.xyz, familyType, StructuralType.NonStructural);
+                        fam.get_Parameter(BuiltInParameter.DOOR_WIDTH).Set(Convert.ToDouble(door.Width));
+                        fam.get_Parameter(BuiltInParameter.DOOR_HEIGHT).Set(Convert.ToDouble(door.Height));
+                        counFlags++;
+                    }                    
                 }
                 tx.Commit();
             }
-            return count;
         }//Устанавливает семейтсво в точки отзеркаленых дверей
-        private static void LoadFamily(Document doc)// Загрузка семейства из файла.
+        internal static void LoadFamily(Document doc)// Загрузка семейства из файла.
         {
             FilteredElementCollector a = new FilteredElementCollector(doc).OfClass(typeof(Family));
             family = a.FirstOrDefault<Element>(e => e.Name.Equals(familyName)) as Family;
@@ -80,7 +81,7 @@ namespace MDoors
                 string FamilyPath = fullPath + familyName + ".rfa";
                 using (Transaction tx = new Transaction(doc))
                 {
-                    tx.Start("Загрузка семейства");
+                    tx.Start("load family");
                     doc.LoadFamily(FamilyPath, out family);
                     // familyType = family.GetType();
                     tx.Commit();

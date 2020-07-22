@@ -24,8 +24,10 @@ namespace MDoors
             doc = uiApp.ActiveUIDocument.Document;
             try
             {
-                FormParameters ParametersForm = new FormParameters();
-                ParametersForm.Show();                
+                FormParameters parForm = new FormParameters();
+
+                parForm.Show();   
+                
 
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)

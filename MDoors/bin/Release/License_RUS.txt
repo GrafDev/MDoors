@@ -1,4 +1,4 @@
-Плагин для Autodesk Revit 2020. 
+Плагин для Autodesk Revit. 
 Разработан BIMpel.
 
 ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ.

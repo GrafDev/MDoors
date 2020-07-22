@@ -18,9 +18,7 @@ namespace MDoors
     {
         static internal List<Door> mirrored=new List<Door>();
 
-
-        private static Document doc = MarkDoors.doc;
-        static internal int FindMirrored()
+        static internal int FindMirrored(Document doc)
         {
             List<Door> allDoors = new List<Door>();
             List<Door> mirroredDoors = new List<Door>();
@@ -40,19 +38,7 @@ namespace MDoors
             mirrored = mirroredDoors;
             return mirrored.Count;
         }
-   /*     static internal void ShowCount()
-        {
-            //string outDoors = "Все двери-" + allDoors.Count.ToString();
-            using (Transaction tx = new Transaction(doc))
-            {
-                tx.Start("Delete Errors");
-                string outDoors = "Отзеркаленные двери-" + Doors.mirrored.Count.ToString();
-                TaskDialog.Show("Revit  ", outDoors);
-                tx.Commit();
-            }
-        } // Выводит количество  дверей*/
-
-    }
+     }
 
     internal class Door // Класс дверей
     {

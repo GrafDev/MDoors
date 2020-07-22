@@ -24,7 +24,15 @@ namespace MDoors
             doc = uiApp.ActiveUIDocument.Document;
             try
             {
-                TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc)+ " mirrored door markers");
+                Flags.LoadFamily(doc);
+                if (Start.dialogBoxShow)
+                {
+                    TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc) + " mirrored door markers");
+                }
+                else
+                {
+                    Flags.Clean(doc);
+                }
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)
             {

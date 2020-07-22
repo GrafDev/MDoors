@@ -37,16 +37,15 @@ namespace MDoors
             string imageCleanLarge = "MDoors.icon_CleanError32.png";
             string imageRibbonSmall = "MDoors.iconMain_Door16.png";
             string imageRibbonLarge =  "MDoors.iconMain_Door32.png";
-            string imageParametersSmall = "MDoors.iconParameters16.png";
-            string imageParametersLarge = "MDoors.iconParameters32.png";
+            string imageParSmall = "MDoors.iconParameters16.pngg";
+            string imageParLarge = "MDoors.iconParameters32.png";
 
             string classMarkName = "MDoors.MarkDoors";
             string classCleanName = "MDoors.CleanDoors";
-            string classParametersName = "MDoors.ParametersDoors";
+            string classParName = "MDoors.ParametersDoors";
 
 
             string thisAssembyPath = Assembly.GetExecutingAssembly().Location;
-
             RibbonPanel ribbonPanel = application.CreateRibbonPanel(panelName);
             ribbonPanel.Enabled = true;
             ribbonPanel.Visible = true;
@@ -68,11 +67,13 @@ namespace MDoors
             pushCleanButton.LargeImage = GetEmbeddedImage(imageCleanLarge);
             pushCleanButton.ClassName = classCleanName;
 
-            PushButtonData buttonParametersData = new PushButtonData("Name3", "Parameters", thisAssembyPath, classParametersName);
-            PushButton pushParametersButton = group1.AddPushButton(buttonParametersData) as PushButton;
-            pushParametersButton.Image = GetEmbeddedImage(imageParametersSmall);
-            pushParametersButton.LargeImage = GetEmbeddedImage(imageParametersLarge);
-            pushParametersButton.ClassName = classParametersName;
+            group1.AddSeparator();
+
+            PushButtonData buttonParData = new PushButtonData("Name3", "Parameters", thisAssembyPath, classParName);
+            PushButton pushParButton = group1.AddPushButton(buttonParData) as PushButton;
+            pushParButton.Image = GetEmbeddedImage(imageParSmall);
+            pushParButton.LargeImage = GetEmbeddedImage(imageParLarge);
+            pushParButton.ClassName = classParName;
 
             return Result.Succeeded;
 

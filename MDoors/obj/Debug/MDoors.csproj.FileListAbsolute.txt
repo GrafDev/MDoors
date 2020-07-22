@@ -13,3 +13,4 @@ C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.csproj.CoreCompileInp
 C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.dll
 C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.pdb
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.FormParameters.resources
+C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.csprojAssemblyReference.cache
