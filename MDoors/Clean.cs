@@ -24,14 +24,14 @@ namespace MDoors
             doc = uiApp.ActiveUIDocument.Document;
             try
             {
-                Flags.LoadFamily(doc);
-                if (Start.dialogBoxShow)
+                Flags.LoadFamily(doc); // Load family mark
+                if (Start.dialogBoxShow)//if allowed show dialog box is  then
                 {
-                    TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc) + " mirrored door markers");
+                    TaskDialog.Show("Mirrored doors", "Removed " + Flags.Clean(doc) + " mirrored door markers");//Show dialog box. Remove marks  from a document and show how much removed
                 }
-                else
+                else//if not allowed show dialog box is then
                 {
-                    Flags.Clean(doc);
+                    Flags.Clean(doc);//Remove marks
                 }
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)
@@ -46,7 +46,7 @@ namespace MDoors
             return Result.Succeeded;
         }
 
-    }
+    } // Defines methods and properties for clearing mirrored door marks from a document
 
-    
+
 }

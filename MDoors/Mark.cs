@@ -24,15 +24,15 @@ namespace MDoors
 
             try
             {
-                Doors.FindMirrored(doc);
-                Flags.LoadFamily(doc);
-                Flags.Place(doc);
-                if (Start.flagsPlace)
+                Doors.FindMirrored(doc);// Поиск отзеркаленых дверей
+                Flags.LoadFamily(doc);//Загрузка семейства марки отзеркаленых дверей из файла
+                Flags.Place(doc);//Установка семейства марки отзеркаленых дверей
+                if (Start.flagsPlace)//Вывод диалоговых окон в зависимости от параметров// Если устанавливать марки можно то
                 {
-                    if (Start.dialogBoxShow)
+                    if (Start.dialogBoxShow)//Если показывать диалоговые окна можно то
                         TaskDialog.Show("Mirrored doors", "Found and mark " + Flags.counFlags + " mirrored doors");
                 }
-                else
+                else//Если устанавливать нельзя, то показываем диалоговое окно, даже если показывать диалоговые окна нельзя
                 {
                     TaskDialog.Show("Mirrored doors", "Found  " + Doors.mirrored.Count + " mirrored doors");
                 }
@@ -49,7 +49,7 @@ namespace MDoors
             }
             return Result.Succeeded;
         }
-    }
+    }// Клас маркировки отзеркаленых дверей
 
 
 }

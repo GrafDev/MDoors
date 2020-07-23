@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ADSK_Error_Place.rfa" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

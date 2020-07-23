@@ -24,9 +24,9 @@ namespace MDoors
             doc = uiApp.ActiveUIDocument.Document;
             try
             {
-                FormParameters parForm = new FormParameters();
+                FormParameters parForm = new FormParameters();// Задает член класса Форм
 
-                parForm.Show();   
+                parForm.Show();   // Показывает член формы
                 
 
             }
@@ -42,7 +42,7 @@ namespace MDoors
             return Result.Succeeded;
         }
 
-    }
+    }// Defines methods and properties for parameters of this plagin
 
-    
+
 }
