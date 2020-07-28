@@ -38,12 +38,14 @@ namespace MDoors
             string imageCleanLarge = "MDoors.icon_CleanError32.png";
             string imageRibbonSmall = "MDoors.iconMain_Door16.png";
             string imageRibbonLarge =  "MDoors.iconMain_Door32.png";
+
             string imageParSmall = "MDoors.iconParameters16.pngg";
             string imageParLarge = "MDoors.iconParameters32.png";///
 
             string classMarkName = "MDoors.MarkDoors";// Имя Класса для маркировки
             string classCleanName = "MDoors.CleanDoors";//Имя класса для очистки
             string classParName = "MDoors.ParametersDoors";// Имя класса для параметров
+
 
 
             string thisAssembyPath = Assembly.GetExecutingAssembly().Location;

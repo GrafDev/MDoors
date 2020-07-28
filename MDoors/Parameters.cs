@@ -25,9 +25,7 @@ namespace MDoors
             try
             {
                 FormParameters parForm = new FormParameters();// Задает член класса Форм
-
-                parForm.Show();   // Показывает член формы
-                
+                parForm.Show();   // Показывает член формы                
 
             }
             catch (Autodesk.Revit.Exceptions.OperationCanceledException)

@@ -3,7 +3,7 @@
 ; Имя приложения
 #define   Name       "MDoors for Revit 2019"
 ; Версия приложения
-#define   Version    "1.0.0"
+#define   Version    "1.0.1"
 ; Фирма-разработчик
 #define   Publisher  "BIMpel"
 ; Сафт фирмы разработчика
