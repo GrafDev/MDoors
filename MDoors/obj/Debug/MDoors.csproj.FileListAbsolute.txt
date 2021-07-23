@@ -15,3 +15,13 @@ C:\Users\gregy\source\repos\MDoors\MDoors\obj\Debug\MDoors.pdb
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.csprojAssemblyReference.cache
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.FormParameters.resources
 C:\Users\jakovlevgm\source\repos\MDoors\MDoors\obj\Debug\MDoors.FormAbout.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\bin\Debug\MDoors.dll
+C:\Users\user\Documents\GitHub\MDoors\MDoors\bin\Debug\MDoors.pdb
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.FormAbout.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.FormParameters.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.dll
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Debug\MDoors.pdb
