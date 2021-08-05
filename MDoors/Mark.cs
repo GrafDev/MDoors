@@ -24,8 +24,8 @@ namespace MDoors
 
             try
             {
-                Doors.FindMirrored(doc);// Поиск отзеркаленых дверей
-                Flags.LoadFamily(doc);//Загрузка семейства марки отзеркаленых дверей из файла
+                Doors.FindMirrored(doc);
+                Flags.LoadFamily(doc);
                 Flags.Place(doc);//Установка семейства марки отзеркаленых дверей
                 if (Start.flagsPlace)//Вывод диалоговых окон в зависимости от параметров// Если устанавливать марки можно то
                 {

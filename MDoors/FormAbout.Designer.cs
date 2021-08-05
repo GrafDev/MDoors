@@ -43,6 +43,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.HideSelection = false;
             this.textBox1.Location = new System.Drawing.Point(13, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -64,7 +65,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(201, 13);
             this.textBox2.TabIndex = 1;
-            this.textBox2.Text = " Copyright © BIMpel, Gregory Yakovlev";
+            this.textBox2.Text = " Copyright ©  Gregory Yakovlev";
             // 
             // textBox3
             // 

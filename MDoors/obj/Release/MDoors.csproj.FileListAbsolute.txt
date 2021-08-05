@@ -1,0 +1,10 @@
+C:\Users\user\Documents\GitHub\MDoors\MDoors\bin\Release\MDoors.dll
+C:\Users\user\Documents\GitHub\MDoors\MDoors\bin\Release\MDoors.pdb
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.FormAbout.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.FormParameters.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.dll
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.pdb
+C:\Users\user\Documents\GitHub\MDoors\MDoors\obj\Release\MDoors.csproj.AssemblyReference.cache

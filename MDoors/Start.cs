@@ -45,35 +45,44 @@ namespace MDoors
             string classMarkName = "MDoors.MarkDoors";// Имя Класса для маркировки
             string classCleanName = "MDoors.CleanDoors";//Имя класса для очистки
             string classParName = "MDoors.ParametersDoors";// Имя класса для параметров
-
+            string nameOfTab = "GrafDev";
 
 
             string thisAssembyPath = Assembly.GetExecutingAssembly().Location;
-            RibbonPanel ribbonPanel = application.CreateRibbonPanel(panelName);//Установка панели
+
+            try
+            {
+                app.CreateRibbonTab(nameOfTab);
+            }
+            catch
+            {
+
+            }
+            var ribbonPanel = application.CreateRibbonPanel(nameOfTab,panelName);//Установка панели
             ribbonPanel.Enabled = true;
             ribbonPanel.Visible = true;
             
-            PulldownButtonData group1Data = new PulldownButtonData("PulldownGroup", "Mark \n mirrored doors");// Установка группы комманд
+            var group1Data = new PulldownButtonData("PulldownGroup", "Mark \n mirrored doors");// Установка группы комманд
             group1Data.Image = GetEmbeddedImage(imageRibbonSmall);
             group1Data.LargeImage = GetEmbeddedImage(imageRibbonLarge);
-            PulldownButton group1 = ribbonPanel.AddItem(group1Data) as PulldownButton;
+            var group1 = ribbonPanel.AddItem(group1Data) as PulldownButton;
 
-            PushButtonData buttonMarkData = new PushButtonData("Name1", "Mark", thisAssembyPath, classMarkName);//Команда маркировки
-            PushButton pushMarkButton = group1.AddPushButton(buttonMarkData) as PushButton;
+            var buttonMarkData = new PushButtonData("Name1", "Mark", thisAssembyPath, classMarkName);//Команда маркировки
+            var pushMarkButton = group1.AddPushButton(buttonMarkData) as PushButton;
             pushMarkButton.Image = GetEmbeddedImage(imagePaintSmall);
             pushMarkButton.LargeImage=GetEmbeddedImage(imagePaintLarge);
             pushMarkButton.ClassName = classMarkName;
             
-            PushButtonData buttonCleanData = new PushButtonData("Name2", "Clean", thisAssembyPath, classCleanName);//Команда очистки
-            PushButton pushCleanButton = group1.AddPushButton(buttonCleanData) as PushButton;
+            var buttonCleanData = new PushButtonData("Name2", "Clean", thisAssembyPath, classCleanName);//Команда очистки
+            var pushCleanButton = group1.AddPushButton(buttonCleanData) as PushButton;
             pushCleanButton.Image = GetEmbeddedImage(imageCleantSmall);
             pushCleanButton.LargeImage = GetEmbeddedImage(imageCleanLarge);
             pushCleanButton.ClassName = classCleanName;
 
             group1.AddSeparator();
 
-            PushButtonData buttonParData = new PushButtonData("Name3", "Parameters", thisAssembyPath, classParName);//Команда параметров
-            PushButton pushParButton = group1.AddPushButton(buttonParData) as PushButton;
+            var buttonParData = new PushButtonData("Name3", "Parameters", thisAssembyPath, classParName);//Команда параметров
+            var pushParButton = group1.AddPushButton(buttonParData) as PushButton;
             pushParButton.Image = GetEmbeddedImage(imageParSmall);
             pushParButton.LargeImage = GetEmbeddedImage(imageParLarge);
             pushParButton.ClassName = classParName;
